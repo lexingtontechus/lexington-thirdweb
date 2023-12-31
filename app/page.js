@@ -1,8 +1,9 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import Profile from "./components/profilesolana";
-import ButtonSolana from "./components/buttonsolana";
+//import Profile from "./components/profilesolana";
+//import ButtonSolana from "./components/buttonsolana";
+import Thirdweb from "./components/profilethirdweb";
 
 const logoImage = ({ src, width, quality }) => {
   return `/${src}?w=${width}&q=${quality || 75}`;
@@ -15,22 +16,19 @@ export default function Home() {
         <div className="hero-content text-center">
           <div className="max-w-2xl">
             <h1 className="text-5xl font-bold uppercase py-4">
-              Lexington Tech Solana Demo
+              Lexington Tech Thirdweb Demo
             </h1>
-            <Image
-              loader={logoImage}
-              src="logo_solana.svg"
-              width={240}
-              height={40}
-              className="mx-auto"
-              alt="logo"
-            />
+            <div className="font-semibold">
+              <LogoThirdweb /> thirdweb
+            </div>
             <h2 className="text-3xl font-bold uppercase py-4">
-              WEB3 infrastructure & integration for gaming, NFTs, Defi, payments & DAOS.
+              WEB3 infrastructure & integration for gaming, NFTs, Defi, payments
+              & DAOS.
             </h2>
             <p>
-              It's time to join the thousands of creators, artists, and
-              developers using Solana.
+              The complete web3 development toolkit Onboard users with wallets,
+              build & deploy smart contracts, accept fiat with payments, and
+              scale apps with infrastructure — on any EVM chain.{" "}
             </p>
             <ul className="list-disc list-inside">
               <li>eCommerce & Payments</li>
@@ -38,7 +36,7 @@ export default function Home() {
               <li>Artists & Creators</li>
             </ul>
             <div className="py-4">
-              <ButtonSolana />
+              <Thirdweb />
             </div>
             <div className="py-4"></div>
           </div>
@@ -48,41 +46,68 @@ export default function Home() {
   );
 }
 
-function LogoSolana() {
+function LogoThirdweb() {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      className="max-w-[600px] h-12"
-      fill="none"
-    >
-      <g clip-path="url(#a)">
+    <svg viewBox="0 0 516 321" fill="none">
+      <g clip-path="url(#clip0_3:35)">
         <path
-          fill="url(#b)"
-          d="m108.53 75.69-17.72 19a4.099 4.099 0 0 1-3 1.31h-84a2.06 2.06 0 0 1-1.51-3.46l17.7-19a4.1 4.1 0 0 1 3-1.31h84a2.05 2.05 0 0 1 1.53 3.46ZM90.81 37.42a4.14 4.14 0 0 0-3-1.31h-84a2.06 2.06 0 0 0-1.51 3.46L20 58.58a4.14 4.14 0 0 0 3 1.31h84a2.06 2.06 0 0 0 1.5-3.46L90.81 37.42Zm-87-13.65h84a4.098 4.098 0 0 0 3-1.31l17.72-19a2.052 2.052 0 0 0-.387-3.14A2.05 2.05 0 0 0 107 0H23a4.1 4.1 0 0 0-3 1.31l-17.7 19a2.06 2.06 0 0 0 1.51 3.46Z"
-        />
+          d="M1.40497 27.0011C-3.73633 14.022 5.84519 0 19.8669 0H106.919C115.098 0 122.342 4.86715 125.381 12.3996L194.671 185.299C196.541 189.935 196.541 195.149 194.671 199.901L151.087 308.484C144.427 325.056 120.823 325.056 114.163 308.484L1.40497 27.0011Z"
+          fill="url(#paint0_linear_3:35)"
+        ></path>
         <path
-          fill="#fff"
-          d="M210.94 40.6H166V25.8h56.62V11h-56.77A14.768 14.768 0 0 0 151 25.69v15a14.768 14.768 0 0 0 14.85 14.71h45v14.8h-58.78V85h58.87a14.766 14.766 0 0 0 13.695-9.044 14.76 14.76 0 0 0 1.155-5.646v-15a14.769 14.769 0 0 0-14.85-14.71ZM298 11h-45.11a14.773 14.773 0 0 0-13.731 9.035A14.752 14.752 0 0 0 238 25.69v44.62c.01 1.943.404 3.865 1.159 5.656A14.77 14.77 0 0 0 252.89 85H298a14.768 14.768 0 0 0 14.85-14.69V25.69a14.76 14.76 0 0 0-4.383-10.42A14.76 14.76 0 0 0 298 11Zm-.11 59.2H253V25.8h44.87l.02 44.4ZM456 11h-44a14.768 14.768 0 0 0-14.85 14.69V85h15V60.69h43.8V85h15V25.69A14.766 14.766 0 0 0 456 11Zm-.11 34.89h-43.8V25.8h43.8v20.09ZM631.15 11h-44a14.768 14.768 0 0 0-14.85 14.69V85h15V60.69H631V85h15V25.69a14.76 14.76 0 0 0-4.383-10.42A14.771 14.771 0 0 0 631.15 11ZM631 45.89h-43.8V25.8H631v20.09ZM544 70.2h-6l-21.45-53a9.887 9.887 0 0 0-9.16-6.2h-13.31a9.845 9.845 0 0 0-9.131 6.035 9.86 9.86 0 0 0-.769 3.765V85h15V25.8h6l21.44 53a9.915 9.915 0 0 0 9.2 6.16h13.31a9.843 9.843 0 0 0 6.98-2.85 9.853 9.853 0 0 0 2.92-6.95V11H544v59.2ZM341.1 11h-15v59.31a14.763 14.763 0 0 0 4.4 10.438A14.775 14.775 0 0 0 341 85h45V70.2h-44.9V11Z"
-        />
+          d="M169.547 26.4217C164.873 13.5585 174.454 0 188.242 0H264.077C272.49 0 279.968 5.2148 282.772 12.9791L345.753 185.879C347.272 190.166 347.272 194.918 345.753 199.321L307.894 303.27C301.585 320.652 276.813 320.652 270.503 303.27L169.547 26.4217Z"
+          fill="url(#paint1_linear_3:35)"
+        ></path>
+        <path
+          d="M321.331 27.0011C316.19 14.022 325.771 0 339.793 0H426.845C435.024 0 442.269 4.86715 445.307 12.3996L514.597 185.299C516.467 189.935 516.467 195.149 514.597 199.901L471.013 308.484C464.353 325.056 440.75 325.056 434.089 308.484L321.331 27.0011Z"
+          fill="url(#paint2_linear_3:35)"
+        ></path>
       </g>
       <defs>
         <linearGradient
-          id="b"
-          x1="10.81"
-          x2="98.89"
-          y1="98.29"
-          y2="-1.01"
+          id="paint0_linear_3:35"
+          x1="7.40492"
+          y1="55.24"
+          x2="260.485"
+          y2="164.437"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset=".08" stop-color="#9945FF" />
-          <stop offset=".3" stop-color="#8752F3" />
-          <stop offset=".5" stop-color="#5497D5" />
-          <stop offset=".6" stop-color="#43B4CA" />
-          <stop offset=".72" stop-color="#28E0B9" />
-          <stop offset=".97" stop-color="#19FB9B" />
+          <stop stop-color="#F213A4"></stop>
+          <stop offset="0.1517" stop-color="#E011A7"></stop>
+          <stop offset="0.4554" stop-color="#B20DAF"></stop>
+          <stop offset="0.8789" stop-color="#6806BB"></stop>
+          <stop offset="1" stop-color="#5204BF"></stop>
         </linearGradient>
-        <clipPath id="a">
-          <path fill="#fff" d="M0 0h646v96H0z" />
+        <linearGradient
+          id="paint1_linear_3:35"
+          x1="175.093"
+          y1="54.447"
+          x2="410.968"
+          y2="148.471"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#F213A4"></stop>
+          <stop offset="0.1517" stop-color="#E011A7"></stop>
+          <stop offset="0.4554" stop-color="#B20DAF"></stop>
+          <stop offset="0.8789" stop-color="#6806BB"></stop>
+          <stop offset="1" stop-color="#5204BF"></stop>
+        </linearGradient>
+        <linearGradient
+          id="paint2_linear_3:35"
+          x1="327.331"
+          y1="55.24"
+          x2="580.411"
+          y2="164.437"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#F213A4"></stop>
+          <stop offset="0.1517" stop-color="#E011A7"></stop>
+          <stop offset="0.4554" stop-color="#B20DAF"></stop>
+          <stop offset="0.8789" stop-color="#6806BB"></stop>
+          <stop offset="1" stop-color="#5204BF"></stop>
+        </linearGradient>
+        <clipPath id="clip0_3:35">
+          <rect width="516" height="321" fill="white"></rect>
         </clipPath>
       </defs>
     </svg>
